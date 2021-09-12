@@ -1982,7 +1982,7 @@ export default {
   </div>
   <div class="custom-icon" v-if="$slots && $slots.icon"><slot name="icon"></slot></div>
   <div class="time-picker-overlay" v-if="showDropdown" @click="toggleActive" tabindex="-1"></div>
-  <div class="dropdown" v-show="showDropdown" tabindex="-1"
+  <div class="dropdown" v-show="{...inputWidthStyle, display: showDropdown ? '' : 'none'}" tabindex="-1"
        :class="[dropdownDirClass]" :style="inputWidthStyle"
        @mouseup="keepFocusing" @click.stop="">
     <div class="select-list" :style="inputWidthStyle" tabindex="-1">
